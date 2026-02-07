@@ -1,9 +1,10 @@
 import React from 'react'
 import { Bookmark } from 'lucide-react';
 
-export const Cardprops = () => {
+export const Cardprops = (props) => {
+    console.log(props.companyName);
+    
   return (
-    <div className='parent'>
         <div className='card'>
        <div>
          <div className='top'>
@@ -11,7 +12,7 @@ export const Cardprops = () => {
             <button>Save <Bookmark size={12}/> </button> 
         </div>
         <div className='center'>
-            <h3>Amezon <span> Five Days ago</span></h3>
+            <h3>{props.companyName} <span> Five Days ago</span></h3>
             <h2>Senior UI/UX Designer</h2>
            <div className='tag'>
                 <h4>Part Time</h4>
@@ -26,10 +27,7 @@ export const Cardprops = () => {
             </div>
             <button>Apply Now</button>
         </div>
-    </div>
-    
-    </div>
-   
+    </div>   
 
   )
 }
